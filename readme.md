@@ -105,3 +105,8 @@ public class App {
     }
 }
 ```
+para ejecutar, abrir terminal en la carpeta del proyecto y ejecutar
+
+```console
+java -cp "bin;lib/h2-2.1.210.jar" App
+```
