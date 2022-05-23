@@ -29,4 +29,9 @@ public class Book {
         this.title = title;
         this.author = author;
     }
+    @Override
+    public String toString() {
+        return "Book [author=" + author + ", id=" + id + ", title=" + title + "]";
+    }
+    
 }

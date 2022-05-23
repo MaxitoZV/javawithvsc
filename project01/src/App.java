@@ -9,6 +9,6 @@ public class App {
             i++;
         }
         Book book = new Book(1, "100 años de soledad", "Gabriel García Marquez");
-        
+        System.out.format("Book: %s", book);
     }
 }
