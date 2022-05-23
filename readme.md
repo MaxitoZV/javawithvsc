@@ -16,6 +16,10 @@ java -version
 >Java(TM) SE Runtime Environment (build 17.0.2+8-LTS-86)
 >Java HotSpot(TM) 64-Bit Server VM (build 17.0.2+8-LTS-86, mixed mode, sharing)
 ```
+Ver información en internet:
+
+![image](https://user-images.githubusercontent.com/40076595/169920537-6863e0bb-fd5c-4ccf-bffc-f819957c2f75.png)
+
 
 ##Visual Studio Code
 
