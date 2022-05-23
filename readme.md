@@ -10,6 +10,7 @@ Requisitos:
 ```
 java -version
 ```
+
 ```
 >java version "17.0.2" 2022-01-18 LTS
 >Java(TM) SE Runtime Environment (build 17.0.2+8-LTS-86)
@@ -50,6 +51,9 @@ Uso de "Go to definition", "Go to"
 
 Uso de "Java Project", "Outline"
 
+```console
+java -cp bin App
+```
 ## Ejercicio 2
 Trabajando con dependencias, en este caso, se debe copiar la dependencia (.jar) en la carpeta lib del proyecto, en este caso el driver jcbc para H2 desde https://dbschema.com/jdbc-driver/H2.html y crear el código para crear una tabla, insertar registros y finalmente consultar registros.
 
