@@ -34,7 +34,7 @@ Con esta extensión se puede crear proyectos en java, tanto sin ninguna herramie
 
 Crear proyecto sin usar herramientas para el build, project1
 
-Usar System.out.format en lugar de System.out.println(String.format(:, hay que agregar \n para cambio de linea, también se puede usar System.out.printf
+Usar System.out.format en lugar de System.out.println(String.format(:, hay que agregar \n para cambio de linea, también se puede usar System.out.printf https://www.javatpoint.com/java-string-format
 
 ```java
 public class App {
