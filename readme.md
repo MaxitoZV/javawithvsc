@@ -103,6 +103,10 @@ Para identificar el modo de conectarse, hacer doble clik en el archivo descargar
 project2
    
 ```java
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
 public class App {
     public static void main(String[] args) throws Exception {
         System.out.println("Start");
@@ -117,29 +121,31 @@ public class App {
         String user ="sa";
         String password="";
         Connection cn = DriverManager.getConnection(url, user, password);
-        System.out.printf("Conected to %s/%s\n",user,url);
+        System.out.printf("Conected to %s@%s\n",user,url);
 
         //Create table
-        var sql =  "CREATE TABLE  PRODUCT " + 
-            "(id INTEGER not NULL, " + 
-            " description VARCHAR(50), " +  
-            " brand VARCHAR(30), " +  
-            " price number, " +  
-            " PRIMARY KEY ( id ))"; 
+        var sql ="""
+            CREATE TABLE  PRODUCT (
+                id INTEGER not NULL, 
+                description VARCHAR(50),   
+                brand VARCHAR(30), 
+                price number, 
+                PRIMARY KEY ( id ))""";     
         var st = cn.createStatement();
         st.executeUpdate(sql);
+        System.out.printf("Table %s created\n", "product");
+
+        String insertString ="insert into PRODUCT (id, description, brand, price) values ('%s','%s','%s',%f)";
         
         //Populate table
-        sql = "insert into PRODUCT (id, description, brand, price) values (1,'Test product 1','Acme',100.98)";
-        st.executeUpdate(sql);
-        sql = "insert into PRODUCT (id, description, brand, price) values (2,'Test product 2','Tnt',1786)";
-        st.executeUpdate(sql);
+        st.executeUpdate(String.format(insertString, 1, "Test product1", "Acme", 100.98));
+        st.executeUpdate(String.format(insertString, 2, "Test product 1","TNT",1786.0));
         
         //Get rows from table
         sql= "select * from product";
         var rs = st.executeQuery(sql);
         while (rs.next()){
-            System.out.printf("Product-> id:%d, description:%s, brand:%s, price: %.1f\n",
+            System.out.printf("Product-> id:%d, description:%s, brand:%s, price: %.2f\n",
             rs.getInt(1),
             rs.getString(2),
             rs.getString(3),
