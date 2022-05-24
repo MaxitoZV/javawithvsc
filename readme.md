@@ -21,7 +21,7 @@ Ver información en internet:
 ![image](https://user-images.githubusercontent.com/40076595/169920537-6863e0bb-fd5c-4ccf-bffc-f819957c2f75.png)
 
 
-##Visual Studio Code
+## Visual Studio Code
 
 Recomendable, la última versión, se debe usar la aplicación, con las siguientes extensiones:
 
